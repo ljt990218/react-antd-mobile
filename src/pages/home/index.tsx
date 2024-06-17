@@ -2,6 +2,7 @@ import { memo, useLayoutEffect, useState } from 'react'
 import { Button, Space, Switch } from 'antd-mobile'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { useGlobalStore } from '@/stores'
 
 const lngs = {
   en: { nativeName: 'English' },
@@ -11,15 +12,13 @@ const lngs = {
 const HomePage = memo(() => {
   const { t, i18n } = useTranslation()
 
-  const [enableDarkMode, setEnableDarkMode] = useState(false)
-  useLayoutEffect(() => {
-    document.documentElement.setAttribute('data-prefers-color-scheme', enableDarkMode ? 'dark' : 'light')
-  }, [enableDarkMode])
-
   const navigate = useNavigate()
   const GoAbout = () => {
     navigate('/about')
   }
+
+  const useGlobal = useGlobalStore() as any
+  console.log(useGlobal)
 
   return (
     <div className="relative">
@@ -40,9 +39,9 @@ const HomePage = memo(() => {
         <Space align="center">
           <div>Dark Mode</div>
           <Switch
-            checked={enableDarkMode}
+            checked={useGlobal.isDark}
             onChange={(v) => {
-              setEnableDarkMode(v)
+              useGlobal.setDarkMode(v)
             }}
           />
         </Space>
