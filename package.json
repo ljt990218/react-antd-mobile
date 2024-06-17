@@ -16,7 +16,6 @@
 		"antd-mobile": "^5.36.1",
 		"autoprefixer": "^10.4.19",
 		"axios": "^1.6.8",
-		"crypto-js": "^4.2.0",
 		"i18next": "^23.11.4",
 		"i18next-browser-languagedetector": "^7.2.1",
 		"jsencrypt": "^3.3.2",
@@ -31,7 +30,6 @@
 	},
 	"devDependencies": {
 		"@iconify/json": "^2.2.205",
-		"@types/crypto-js": "^4.2.2",
 		"@types/lodash": "^4.17.1",
 		"@types/node": "^20.12.5",
 		"@types/react": "^18.2.66",
