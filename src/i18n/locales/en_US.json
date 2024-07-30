@@ -1,8 +1,7 @@
 {
+	"home": "Home",
+	"darkMode": "Dark Mode",
 	"common": {
 		"more": "look more"
-	},
-	"leftMenus": {
-		"home": "Home"
 	}
 }
