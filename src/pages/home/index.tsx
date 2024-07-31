@@ -22,7 +22,7 @@ const HomePage = memo(() => {
   return (
     <div className="relative">
       <select
-        className="absolute right-10 top-10"
+        className="absolute right-10 top-10 .dark:text-#fff"
         value={i18n.language}
         onChange={(evt) => {
           i18n.changeLanguage(evt.target.value)
@@ -35,7 +35,7 @@ const HomePage = memo(() => {
 
       <h1 className="text-32px bg-gradient-to-r from-blue-600 to-pink-600 bg-clip-text text-center font-bold text-transparent">{t('home')}</h1>
 
-      <div className="mt-10 flex flex-col items-center">
+      <div className="mt-10 flex flex-col items-center .dark:text-#fff">
         <Space align="center">
           <div>{t('darkMode')}</div>
           <Switch
