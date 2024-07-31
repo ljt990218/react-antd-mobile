@@ -10,13 +10,12 @@ const globalState = create()(
       darkMode: prefersDark ? 'dark' : 'light',
       setDarkMode: (isDark: boolean) => {
         const html = document.documentElement
-        const body = document.body
         if (isDark) {
           html.setAttribute('class', 'dark')
-          body.setAttribute('data-prefers-color-scheme', 'dark')
+          html.setAttribute('data-prefers-color-scheme', 'dark')
         } else {
           html.removeAttribute('class')
-          body.removeAttribute('data-prefers-color-scheme')
+          html.removeAttribute('data-prefers-color-scheme')
         }
         set(() => ({
           isDark: isDark,
