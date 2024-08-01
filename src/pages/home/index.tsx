@@ -22,7 +22,7 @@ const HomePage = memo(() => {
   return (
     <div className="relative">
       <select
-        className="absolute right-10 top-10 .dark:text-#fff"
+        className="absolute right-10 top-10"
         value={i18n.language}
         onChange={(evt) => {
           i18n.changeLanguage(evt.target.value)
@@ -39,6 +39,10 @@ const HomePage = memo(() => {
         <Space align="center">
           <div>{t('darkMode')}</div>
           <Switch
+            style={{
+              '--height': '24px',
+              '--width': '40px',
+            }}
             checked={useGlobal.isDark}
             onChange={(v) => {
               useGlobal.setDarkMode(v)
